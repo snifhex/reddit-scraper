@@ -18,6 +18,18 @@ def auth():
     print(reddit.user.me())
     return reddit
 
+def export_upvoted():
+    pass
+
+def export_downvoted():
+    pass
+
+def export_submissions():
+    pass
+
+def export_comments():
+    pass
+
 def export_saved(user):
     saved = user.saved()
     links = {str(_id):"reddit.com"+_id.permalink for _id in saved}
@@ -34,7 +46,7 @@ def main():
     reddit = auth()
     user = reddit.user.me()
     links = export_saved(user)
-    print(links['erdodk6'])
+    #print(links[''])
 
 if __name__ == '__main__':
     main()
